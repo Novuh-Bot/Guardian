@@ -27,7 +27,7 @@ Git ([Windows](https://git-scm.com/download/win)|[Linux](https://git-scm.com/boo
 
 > <b>KEEP THIS TOKEN SECRET, BAD THINGS CAN HAPPEN IF YOU SHARE IT.</b>
 
-Run the bot: Do `cd Novuh-Mod-Bot` and do `node app.js` and `node level.js` if you want to trigger the level system.
+<b>Run the bot:</b> Do `cd Novuh-Mod-Bot` and do `node app.js` and `node level.js` if you want to trigger the level system.
 
 <b>Disclaimer:</b>
 
