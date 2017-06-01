@@ -1,0 +1,29 @@
+{
+    "helpMsg1": [
+        "**Prefix is /**",
+        "```Moderation Commands```",
+        "**ban** - Bans a user",
+        "**unban** - Unbans a user",
+        "**kick** - Kicks a user",
+        "**mute** - Mutes a user",
+        "**warn** - Warns a user",
+        "**lockdown** - Locks a channel",
+        "**addrole** - Adds a role to a user",
+        "**removerole** - Removes a role from a user"
+      ],
+    "helpMsg2": [
+      "```Useful Commands```",
+      "**avatar** - Displays a user's avatar",
+      "**google** - Google's something",
+      "**level** - Displays your level and points",
+      "**ping** - Pings the bot",
+      "**serverinfo** - Displays info about the server",
+      "**uptime** - Shows how long the bot has been running for"
+      ],
+    "helpMsg3": [
+      "```Fun Commands```",
+      "**smack** - Smacks a user",
+      "**punch** - Punches a user",
+      "**hammer** - Gives you a hammer to throw at a pleb"
+    ]
+}
