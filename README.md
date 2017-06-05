@@ -1,5 +1,5 @@
 # Novuh-Bot
-A small, fun bot for messing around with friends
+A small bot built with a focus on moderation, but an emphasis on fun.
 
 > <b>Disclaimer: While the bot is open source, I am not responsible for any malicious code you add to the bot, nor am I responsible for anything that happens to your account as a result of malicious code.</b>
 
