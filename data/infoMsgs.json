@@ -1,0 +1,19 @@
+{
+  "infoMsg1": [
+    "**```Important Information```**",
+    "Hey there! If you're seeing this, it means you want to add the bot to your server. Before we do that, there are a couple things you need to know about the bot. If you do not follow these steps, the bot won't work for you, and will error for me! We don't want that, do we?",
+    "First, you must create a couple roles, these being Staff and Administrator. That enables the permissions system to work.",
+    "Next, you need to make a channel named 'logs'. The channel is CaSe SeNsItIvE. This is where all of the logs for bans, kicks, warnings and mutes go."
+  ],
+  "infoMsg2": [
+    "**```Invite the Bot```**",
+    "Then, you need to invite the bot! Here's an invite link. https://discordapp.com/oauth2/authorize?permissions=2146958591&scope=bot&client_id=316750900846788609",
+    "Once you've done that, do `/help` to see all the commands that the bot has for you."
+  ],
+  "infoMsg3": [
+    "**```Neat Links```**",
+    "GitHub Repository: <https://github.com/OGNova/Novuh-Mod-Bot>",
+    "To-Do List: https://trello.com/b/txGQqtPU/novuh-bot",
+    "Support Server: https://discordapp.com/invite/qtpgmFe"
+  ]
+}
