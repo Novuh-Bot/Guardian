@@ -25,7 +25,7 @@ SQLite
 
 Git ([Windows](https://git-scm.com/download/win)|[Linux](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)|[MacOS](https://git-scm.com/download/mac)) (Git is not necessarily required, makes it easier to run though.)
 
-PM2 [Download(http://pm2.keymetrics.io/)]
+PM2 [Download](http://pm2.keymetrics.io/)
 
 <h2><b>The following steps are for running your own instance of the bot. This is recommended if you want to add commands, or have control over your instance of it.</b></h2>
 
