@@ -13,7 +13,7 @@ exports.run = (client, msg, args) => {
     member.addRole(role).catch(e => {
         return msg.channel.send(`:no_entry_sign: **Error:**\n${e}`);
     });
-    msg.channel.send(`:white_check_mark: **${msg.author.username}**, I've added the role of **${name}** to **${msg.mentions.users.first().username}**.`);
+    msg.channel.send(`:white_check_mark: **${msg.author.username}**, I've added the **${name}** role from **${msg.mentions.users.first().username}**.`);
 }
 
 exports.conf = {
