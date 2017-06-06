@@ -1,7 +1,8 @@
 {
-	"ownerid": "Your ID here",
-	"modrolename": "Your mod role's name here",
-	"adminrolename": "Your admin role's name here",
-	"prefix": "Your prefix",
-	"token": "Your bot's token here"
+	"ownerid": "166304313004523520",
+	"modrolename": "Staff",
+	"adminrolename": "Administrator",
+	"overlordrolename": "Gaylord",
+	"prefix": "/",
+	"token": "Your bot's token here
 }
