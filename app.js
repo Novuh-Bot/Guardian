@@ -57,6 +57,7 @@ client.elevation = message => {
   if (overlord_role && message.member.roles.has(overlord_role.id)) permlvl = 4;
   if (message.author.id === settings.ownerid) permlvl = 5;
   return permlvl;
+  
 };
 
 
