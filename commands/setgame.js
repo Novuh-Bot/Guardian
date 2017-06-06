@@ -7,7 +7,7 @@ exports.conf = {
   enabled: true,
   guildOnly: false,
   aliases: [],
-  permLevel: 4
+  permLevel: 5
 };
 
 exports.help = {

@@ -5,7 +5,7 @@ function clean(text) {
         return text;
 }
 exports.run = (client, message, args) => {
-    if (message.author.id !== "166304313004523520") return;
+    if (message.author.id !== "166304313004523520")then(message.channel.send('You scrub, what made you think you\'d be able to do that??'));
     args = args.join(" ");
     try {
         var evaled = eval(args);
@@ -20,7 +20,7 @@ exports.conf = {
   enabled: true,
   guildOnly: false,
   aliases: [],
-  permLevel: 4
+  permLevel: 5
 };
 
 exports.help = {

@@ -6,7 +6,10 @@ exports.run = (client, message) => {
         }, 250);
         setTimeout(() => {
         message.author.send(info.infoMsg3);
-      }, 500);
+        }, 500);
+        setTimeout(() => {
+        message.author.send(info.infoMsg4);
+        }, 800);
     }
 
 exports.conf = {
