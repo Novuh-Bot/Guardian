@@ -2,8 +2,8 @@ const Discord = require('discord.js');
 exports.run = (client, message, args) => {
   let reason = args.slice(1).join(' ');
   let user = message.mentions.users.first();
-  let modlog = client.channels.find('name', 'logs');
-  if (!modlog) return message.reply('I cannot find a logs channel');
+  let logchannel = message.guild.channels.find('name', 'logs');
+  if (!logchannel) return message.reply('I cannot find a logs channel');
   if (reason.length < 1) return message.reply('You must supply a reason for the warning.');
   if (message.mentions.users.size < 1) return message.reply('You must mention someone to warn them.').catch(console.error);
   const embed = new Discord.RichEmbed()
@@ -14,7 +14,7 @@ exports.run = (client, message, args) => {
   .addField('Moderator:', `${message.author.username}#${message.author.discriminator}`)
   .addField('Reason', reason);
   message.channel.send(':white_check_mark: Success! I\'ve logged the warning in <#293573342999609345>.')
-  return client.channels.get(modlog.id).send({embed});
+  return client.channels.get(logchannel.id).send({embed});
 };
 
 exports.conf = {
