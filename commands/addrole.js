@@ -1,3 +1,4 @@
+const settings = require('../settings.json');
 exports.run = (client, msg, args) => {
     if (!msg.guild.member(client.user).hasPermission("MANAGE_ROLES_OR_PERMISSIONS")) return msg.reply(":no_entry_sign: **Error:** I don't have the **Manage Roles** permission!");
     if (!msg.member.hasPermission("MANAGE_ROLES_OR_PERMISSIONS")) return msg.reply(":no_entry_sign: **Error:** You don't have the **Manage Roles** permission!");
@@ -13,7 +14,7 @@ exports.run = (client, msg, args) => {
     member.addRole(role).catch(e => {
         return msg.channel.send(`:no_entry_sign: **Error:**\n${e}`);
     });
-    msg.channel.send(`:white_check_mark: **${msg.author.username}**, I've added the **${name}** role from **${msg.mentions.users.first().username}**.`);
+    msg.channel.send(`<:check:${settings.check}> **${msg.author.username}**, I've added the **${name}** role from **${msg.mentions.users.first().username}**.`);
 }
 
 exports.conf = {
