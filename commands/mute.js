@@ -15,7 +15,7 @@ exports.run = (client, message, args) => {
     .addField('User:', `${user.username}#${user.discriminator} (${user.id})`)
     .addField('Moderator:', `${message.author.username}#${message.author.discriminator}`)
     .addField('Reason', reason);
-  message.channel.send(':white_check_mark: Success !I\'ve logged the mute in <#293573342999609345>.')
+  message.channel.send(':white_check_mark: Success! I\'ve logged the mute in <#293573342999609345>.')
 
   if (!message.guild.member(client.user).hasPermission('MANAGE_ROLES_OR_PERMISSIONS')) return message.reply(':x: I do not have the correct permissions.').catch(console.error);
 

@@ -1,8 +1,5 @@
 exports.run = (client, message) => {
-  message.channel.send('Ping?')
-    .then(msg => {
-      msg.edit(`Pong! (took: ${msg.createdTimestamp - message.createdTimestamp}ms)`);
-    });
+  message.channel.send('Ping?').then(m => m.edit(`Roundtrip took: ${message.createdTimestamp - m.createdTimestamp}ms. Heartbeat: ${Math.round(client.ping)}ms.`))
 };
 
 exports.conf = {

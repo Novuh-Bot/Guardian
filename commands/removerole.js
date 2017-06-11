@@ -1,3 +1,4 @@
+const settings = require('../settings.json');
 exports.run = (client, msg, args) => {
     if (!msg.guild.member(client.user).hasPermission("MANAGE_ROLES_OR_PERMISSIONS")) return msg.reply(":no_entry_sign: **Error:** I don't have the **Manage Roles** permission!");
     if (!msg.member.hasPermission("MANAGE_ROLES_OR_PERMISSIONS")) return msg.reply(":no_entry_sign: **Error:** You don't have the **Manage Roles** permission!");
@@ -9,7 +10,7 @@ exports.run = (client, msg, args) => {
     member.removeRole(role).catch(e => {
         msg.channel.send(":no_entry_sign: There was an error! It most likely is that the role you are trying to add is higher than the the role I have!");
     });
-    msg.channel.send(`:white_check_mark: **${msg.author.username}**, I've removed the **${name}** role from **${msg.mentions.users.first().username}**.`);
+    msg.channel.send(`<:check:${settings.check}> **${msg.author.username}**, I've removed the **${name}** role from **${msg.mentions.users.first().username}**.`);
 }
 
 exports.conf = {

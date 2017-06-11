@@ -1,8 +1,8 @@
 {
 	"ownerid": "166304313004523520",
-	"modrolename": "Staff",
-	"adminrolename": "Administrator",
+	"modrolename": "Staff role name",
+	"adminrolename": "Admin role name",
 	"overlordrolename": "Gaylord",
-	"prefix": "/",
-	"token": "Your bot's token here
+	"prefix": "Your bot's prefix",
+	"token": "Your bot's token here",
 }

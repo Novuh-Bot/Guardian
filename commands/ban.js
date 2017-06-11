@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const settings = require('../settings.json');
 exports.run = (client, message, args) => {
   let reason = args.slice(1).join(' ');
   let user = message.mentions.users.first();
@@ -9,6 +10,7 @@ exports.run = (client, message, args) => {
   if (message.mentions.users.size < 1) return message.reply('You must mention someone to ban them.').catch(console.error);
 
   if (!message.guild.member(user).bannable) return message.reply(':x: I cannot ban that member');
+  message.guild.member(user).ban();
 
   const embed = new Discord.RichEmbed()
     .setColor(0xFF0000)
@@ -17,7 +19,7 @@ exports.run = (client, message, args) => {
     .addField('User:', `${user.username}#${user.discriminator} (${user.id})`)
     .addField('Moderator:', `${message.author.username}#${message.author.discriminator}`)
     .addField('Reason', reason);
-  message.channel.send(':white_check_mark: Success! I\'ve logged the ban in <#293573342999609345>.')
+  message.channel.send(`<:hammer:${settings.hammer}> Bippity boppity **BAN**! I\'ve logged the ban in the logs channel.`)
   return client.channels.get(modlog.id).send({embed});
 };
 
