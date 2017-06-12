@@ -1,5 +1,6 @@
+const settings = require('../settings.json');
 exports.run = (client, message) => {
-    message.channel.sendMessage('Here\'s a hammer to throw! http://cdn.itsnovuh.ga/hammer.png')
+  message.channel.send(`Here's a hammer to throw! <:hammer:${settings.hammer}>`)
   }
 
 exports.conf = {

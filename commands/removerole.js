@@ -10,7 +10,7 @@ exports.run = (client, msg, args) => {
     member.removeRole(role).catch(e => {
         msg.channel.send(":no_entry_sign: There was an error! It most likely is that the role you are trying to add is higher than the the role I have!");
     });
-    msg.channel.send(`<:check:${settings.check}> **${msg.author.username}**, I've removed the **${name}** role from **${msg.mentions.users.first().username}**.`);
+    msg.channel.send(`<:greenTick:${settings.check}> **${msg.author.username}**, I've removed the **${name}** role from **${msg.mentions.users.first().username}**.`);
 }
 
 exports.conf = {
