@@ -41,7 +41,7 @@ PM2 [Download](http://pm2.keymetrics.io/)
 
 > <b>KEEP THIS TOKEN SECRET, BAD THINGS CAN HAPPEN IF YOU SHARE IT.</b>
 
-<b>Run the bot:</b> Do `cd Novuh-Mod-Bot` and do `node app.js` and `node sqllevels.js` if you want to trigger the level system. I suggest using PM2 to manage the processes. You can start the processes by doing `cd Novuh-Mod-Bot` and running `pm2 start app.js` and `pm2 start sqllevels.js`.
+<b>Run the bot:</b> Do `cd Novuh-Mod-Bot` and do `node app.js` and `node sqllevels.js` if you want to trigger the level system. I suggest using PM2 to manage the processes. You can start the processes by doing `cd Novuh-Mod-Bot` and running `pm2 start app.js` and `pm2 start sqllevel.js`.
 
 <b>Need help?</b>
 
