@@ -1,6 +1,8 @@
-const settings = require('../settings.json');
+const settings = require('../settings.json')
 exports.run = (client, message) => {
-  message.channel.send(`Here's a hammer to throw! <:hammer:${settings.hammer}>`)
+  let user = message.mentions.users.first();
+  if (message.mentions.users.first() < 1) return message.reply('You can\'t throw a hammer at thin air, pick someone fool.');
+  message.channel.send(`${message.author.username} threw a hammer at ${message.mentions.users.first().username}. <:hammmer:${settings.hammer}>`)
   }
 
 exports.conf = {
