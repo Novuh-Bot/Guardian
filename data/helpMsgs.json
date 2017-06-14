@@ -21,14 +21,17 @@
       "**uptime** - Shows how long the bot has been running for",
       "**bug** - Sends a bug to HQ for the developer to take a look at",
       "**suggest** - Suggest something to the developer to add to the bot",
-      "**info** - Displays info about the bot"
+      "**info** - Displays info about the bot",
+      "**userinfo** - Displays info about your account"
       ],
     "helpMsg3": [
       "```Fun Commands```",
       "**smack** - Smacks a user",
       "**punch** - Punches a user",
       "**hammer** - Gives you a hammer to throw at a pleb",
-      "**copypasta** - Sends one of 4 well known copypastas from the internet."
+      "**copypasta** - Sends one of 4 well known copypastas from the internet",
+      "**roll** - Roll a random number",
+      "**rps** - Play Rock, Paper, Scissors against the bot"
     ],
     "helpMsg4": [
       "```Bot Owner Commands```",
