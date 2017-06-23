@@ -11,6 +11,9 @@ exports.run = (client, message) => {
         setTimeout(() => {
           message.author.send(help.helpMsg4);
        }, 800);
+        setTimeout(() => {
+          message.author.send(help.helpMsg5);
+        }, 1000);
        message.channel.send(`**${message.author.username}**, check your DMs!`)
      } else {
        message.author.send(help.helpMsg1);
@@ -20,6 +23,9 @@ exports.run = (client, message) => {
        setTimeout(() => {
          message.author.send(help.helpMsg3);
       }, 500);
+      setTimeout(() => {
+        message.author.send(help.helpMsg4);
+     }, 800); 
       message.channel.send(`**${message.author.username}**, check your DMs!`)
     }
   }

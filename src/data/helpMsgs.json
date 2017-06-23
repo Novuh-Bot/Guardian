@@ -12,6 +12,17 @@
         "**removerole** - Removes a role from a user"
       ],
     "helpMsg2": [
+      "**join** - Joins your voice channel",
+      "**add** - Adds a valid YouTube link to the queue",
+      "**queue** - Shows the current queue, up to 15 songs shown",
+      "**play** - Plays the music queue if already in a voice channel",
+      "**THE FOLLOW COMMANDS ONLY FUNCTION WHILE THE PLAY COMMAND IS RUNNING**",
+      "**pause** - Pauses the music",
+      "**resume** - Resumes the music if it was paused",
+      "**skip** - Skips the playing song",
+      "**time** - Shows the playtime of the current song"
+    ],
+    "helpMsg3": [
       "```Useful Commands```",
       "**avatar** - Displays a user's avatar",
       "**level** - Displays your level",
@@ -24,7 +35,7 @@
       "**info** - Displays info about the bot",
       "**userinfo** - Displays info about your account"
       ],
-    "helpMsg3": [
+    "helpMsg4": [
       "```Fun Commands```",
       "**smack** - Smacks a user",
       "**punch** - Punches a user",
@@ -33,7 +44,7 @@
       "**roll** - Roll a random number",
       "**rps** - Play Rock, Paper, Scissors against the bot"
     ],
-    "helpMsg4": [
+    "helpMsg5": [
       "```Bot Owner Commands```",
       "**eval** - Evaluates a string",
       "**exec** - Executes a process command",

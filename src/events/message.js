@@ -2,8 +2,10 @@ const settings = require('../settings.json');
 module.exports = message => {
   let client = message.client;
   if (message.author.bot) return;
-/*  const advertising = ['discord.gg', 'discordapp.com'];
-if(advertising.some(word => message.content.includes(word))){
+/*const advertising = ['discord.gg', 'discordapp.com'];
+let member = message.member;
+let staffRole = message.guild.roles.find('name', 'Staff');
+if (!member.roles.has(staffRole.id) && advertising.some(word => message.content.includes(word))) {
     message.delete().then(message.reply('you just sent an invite link. Now why would you do that?'))
   };*/
   if (!message.content.startsWith(settings.prefix)) return;

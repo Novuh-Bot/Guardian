@@ -12,7 +12,7 @@ exports.run = (client, message, args) => {
       .then(m => {
         client.reload(command)
           .then(() => {
-            m.edit(`Successfully reloaded: ${command} in ${m.createdTimestamp - message.createdTimestamp}ms.`);
+            m.edit(`I Successfully reloaded the command **${command}** in **${m.createdTimestamp - message.createdTimestamp}**ms.`);
           })
           .catch(e => {
             m.edit(`Command reload failed: ${command}\n\`\`\`${e.stack}\`\`\``);
@@ -24,7 +24,7 @@ exports.run = (client, message, args) => {
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: ['r'],
+  aliases: ['cr'],
   permLevel: 5
 };
 
