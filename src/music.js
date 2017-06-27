@@ -77,10 +77,7 @@ const commands = {
 		queue[msg.guild.id].songs.forEach((song, i) => { tosend.push(`${i+1}. ${song.title} - Requested by: ${song.requester}`);});
 		msg.channel.send(`__**${msg.guild.name}'s Music Queue:**__ Currently **${tosend.length}** songs queued ${(tosend.length > 15 ? '*[Only next 15 shown]*' : '')}\n\`\`\`${tosend.slice(0,15).join('\n')}\`\`\``);
 	},
-	'help': (msg) => {
-		let tosend = ['```xl', settings.prefix + 'join : "Join Voice channel of msg sender"',	settings.prefix + 'add : "Add a valid youtube link to the queue"', settings.prefix + 'queue : "Shows the current queue, up to 15 songs shown."', settings.prefix + 'play : "Play the music queue if already joined to a voice channel"', '', 'the following commands only function while the play command is running:'.toUpperCase(), settings.prefix + 'pause : "pauses the music"',	settings.prefix + 'resume : "resumes the music"', settings.prefix + 'skip : "skips the playing song"', settings.prefix + 'time : "Shows the playtime of the song."',	'volume+(+++) : "increases volume by 2%/+"',	'volume-(---) : "decreases volume by 2%/-"',	'```'];
-		msg.channel.send(tosend.join('\n'));
-	},
+	
 	'reboot': (msg) => {
 		if (msg.author.id == settings.ownerid);
     msg.channel.send(`:wave:`).then(process.exit()); //Requires a node module like Forever to work.
