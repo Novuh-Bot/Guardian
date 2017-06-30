@@ -18,7 +18,6 @@ exports.run = (client, message, args) => {
   message.channel.send(':white_check_mark: Success! I\'ve logged the mute in <#293573342999609345>.')
   return client.channels.get(logchannel.id).send({embed});
 
-  if (!message.guild.member(client.user).hasPermission('MANAGE_ROLES_OR_PERMISSIONS')) return message.reply(':x: I do not have the correct permissions.').catch(console.error);
 
   if (message.guild.member(user).roles.has(muteRole.id)) {
     message.guild.member(user).removeRole(muteRole).then(() => {

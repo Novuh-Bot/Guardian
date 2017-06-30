@@ -4,7 +4,7 @@ function checkDays(date) {
     let diff = now.getTime() - date.getTime();
     let days = Math.floor(diff / 86400000);
     return days + (days == 1 ? " day" : " days") + " ago";
-};
+}
 exports.run = (client, message, args) => {
   const embed = new Discord.RichEmbed();
   let verifLevels = ["None", "Low", "Medium", "(╯°□°）╯︵  ┻━┻", "┻━┻ミヽ(ಠ益ಠ)ノ彡┻━┻"];

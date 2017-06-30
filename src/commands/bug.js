@@ -5,7 +5,7 @@ exports.run = (client, message, args) => {
     message.reply("Thanks for submitting a bug!");
     const content = `**${message.author.username}#${message.author.discriminator}** (${message.author.id}) reported:\n~~--------------------------------~~\n${args}\n~~--------------------------------~~\nOn the server: **${message.guild.name}**\nServer ID: **${message.guild.id}**`;
     client.channels.get('320987535830548480').send(`${content}`)
-}
+};
 
 exports.conf = {
   enabled: true,
