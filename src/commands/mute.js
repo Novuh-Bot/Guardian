@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const settings = require('../settings.json')
 exports.run = (client, message, args) => {
   let reason = args.slice(1).join(' ');
   let user = message.mentions.users.first();
@@ -15,17 +16,17 @@ exports.run = (client, message, args) => {
     .addField('User:', `${user.username}#${user.discriminator} (${user.id})`)
     .addField('Moderator:', `${message.author.username}#${message.author.discriminator}`)
     .addField('Reason', reason);
-  message.channel.send(':white_check_mark: Success! I\'ve logged the mute in <#293573342999609345>.')
+  message.channel.send(`<:greenTick:${settings.greenTick}> Success! I've logged the mute in the ${logchannel} channel.`)
   return client.channels.get(logchannel.id).send({embed});
 
 
   if (message.guild.member(user).roles.has(muteRole.id)) {
     message.guild.member(user).removeRole(muteRole).then(() => {
-      client.channels.get(modlog.id).send({embed}).catch(console.error);
+      client.channels.get(logchannel.id).send({embed}).catch(console.error);
     });
   } else {
     message.guild.member(user).addRole(muteRole).then(() => {
-      client.channels.get(modlog.id).send({embed}).catch(console.error);
+      client.channels.get(logchannel.id).send({embed}).catch(console.error);
     });
   }
 

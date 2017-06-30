@@ -47,11 +47,6 @@ client.on("message", message => {
       message.reply(`you currently have ${row.points} points, good going!`);
     });
   }
-
-  if (message.content.startsWith(prefix + "daily")) {
-     sql.run(`UPDATE scores SET points = ${row.points + 200} WHERE userId = ${message.author.id}`);
-     message.reply(`you've redeemed your daily 200 credits.`)
-  }
 });
 
 client.login(settings.token);

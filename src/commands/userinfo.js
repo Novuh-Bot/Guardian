@@ -1,6 +1,6 @@
 const moment = require('moment');
 const Discord = require('discord.js');
-exports.run = (client, msg, args) => {
+exports.run = (client, msg) => {
   const embed = new Discord.RichEmbed();
   embed.addField("Username", `${msg.author.username}#${msg.author.discriminator}`, true)
           .addField("ID", `${msg.author.id}`, true)
@@ -14,13 +14,13 @@ exports.run = (client, msg, args) => {
           .addField('Joined Discord', `${moment(msg.author.createdAt).format('MM.DD.YY')}`, true)
           .addField('Joined Server', `${moment(msg.member.joinedAt).format('MM.DD.YY')}`, true)
           .addField('Roles', `${msg.member.roles.filter(r => r.name).size}`, true)
-          .addField('Is Bot', `${msg.author.bot.toString().toUpperCase()}`, true)
+          .addField('Is Bot', `${msg.author.bot.toString().toUpperCase()}`, true);
       msg.channel.sendEmbed(
           embed, {
               disableEveryone: true
           }
       );
-}
+};
 
 exports.conf = {
   enabled: true,

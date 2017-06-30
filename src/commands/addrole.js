@@ -1,5 +1,5 @@
 const settings = require('../settings.json');
-exports.run = (client, message, args) => {
+exports.run = (client, message) => {
     if (message.mentions.users.size === 0) return message.reply(`:<:redTick:${settings.redTick}>: Please mention a user to give the role to.\nExample: ;addrole @user Members`);
     let member = message.guild.member(message.mentions.users.first());
     if (!member) return message.reply(`:<:redTick:${settings.redTick}>: **Error:** That user does not seem valid.`);
@@ -13,7 +13,7 @@ exports.run = (client, message, args) => {
         return message.channel.send(`:<:redTick:${settings.redTick}>: **Error:**\n${e}`);
     });
     message.channel.send(`<:greenTick:${settings.greenTick}> **${message.author.username}**, I've added the role of **${name}** to **${message.mentions.users.first().username}**.`);
-}
+};
 
 exports.conf = {
   enabled: true,

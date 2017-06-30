@@ -1,7 +1,7 @@
 exports.run = (client, message) => {
   let user = message.mentions.users.first();
-      message.reply('You have smacked <@' + user.id + '>')
-  }
+      message.reply('You have smacked <@' + user.id + '>');
+  };
   
 exports.conf = {
   enabled: true,
