@@ -9,4 +9,4 @@ I do not give you permission to run the bot yourself in any way, shape, or form.
 
 <b>Need help?</b>
 
-You can join the [support server](https://discord.gg/qtpgmFe), and invite the bot using this [link](https://discordapp.com/oauth2/authorize?permissions=2146958591&scope=bot&client_id=316750900846788609).
+You can join the [support server](https://discord.gg/qtpgmFe), and invite the bot using this [link](https://discordapp.com/oauth2/authorize?permissions=2146958591&scope=bot&client_id=329022281013657612).
