@@ -5,7 +5,6 @@ exports.run = (client, message, args) => {
   let user = message.mentions.users.first();
   let logchannel = message.guild.channels.find('name', 'logs');
   if (!logchannel) return message.reply('I cannot find a logs channel');
-  if (!message.member.hasPermission("BAN_MEMBERS")) return msg.reply(":no_entry_sign: **Error:** You don't have the **Ban Members** permission!");
   if (reason.length < 1) return message.reply('You must supply a reason for the ban.');
   if (message.mentions.users.size < 1) return message.reply('You must mention someone to ban them.').catch(console.error);
 
@@ -19,7 +18,7 @@ exports.run = (client, message, args) => {
     .addField('User:', `${user.username}#${user.discriminator} (${user.id})`)
     .addField('Moderator:', `${message.author.username}#${message.author.discriminator}`)
     .addField('Reason', reason);
-    message.channel.send(`<:hammer:${settings.hammer}> Bippity boppity **BAN**! I\'ve logged the ban in the logs channel.`)
+    message.channel.send(`<:hammer:${settings.hammer}> Bippity boppity **BAN**! I've logged the ban in the logs channel.`)
   return client.channels.get(logchannel.id).send({embed});
 };
 

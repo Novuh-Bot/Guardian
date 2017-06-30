@@ -9,7 +9,7 @@ exports.run = (client, message) => {
         seconds = (seconds < 10) ? "0" + seconds : seconds;
 
         message.channel.send(":chart_with_upwards_trend: I've been running for** " + hours + " **hours, **" + minutes + "** minutes and **" + seconds + "." + milliseconds + "** seconds!");
-}
+};
 
 exports.conf = {
   enabled: true,

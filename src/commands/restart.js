@@ -1,6 +1,6 @@
-exports.run = (client, message, args) => {
-  process.exit()
-}
+exports.run = (client, message) => {
+  process.exit();
+};
 
 exports.conf = {
   enabled: true,

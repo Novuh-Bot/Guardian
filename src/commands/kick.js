@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const settings = require('../settings.json')
 exports.run = (client, message, args) => {
   let reason = args.slice(1).join(' ');
   let user = message.mentions.users.first();
@@ -17,7 +18,7 @@ exports.run = (client, message, args) => {
     .addField('User:', `${user.username}#${user.discriminator} (${user.id})`)
     .addField('Moderator:', `${message.author.username}#${message.author.discriminator}`)
     .addField('Reason', reason);
-  message.channel.send(':white_check_mark: Success! I\'ve logged the kick in <#293573342999609345>.')
+  message.channel.send(`<:greenTick:${settings.greenTick}> Success! I've logged the kick in the ${logchannel} channel.`);
   return client.channels.get(logchannel.id).send({embed});
 };
 

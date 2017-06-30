@@ -1,11 +1,11 @@
 function clean(text) {
-    if (typeof(text) === "string")
+    if (typeof(text) === 'string')
         return text.replace(/`/g, "`" + String.fromCharCode(8203)).replace(/@/g, "@" + String.fromCharCode(8203));
     else
         return text;
 }
 exports.run = (client, message, args) => {
-    if (message.author.id !== "166304313004523520")then(message.channel.send('You scrub, what made you think you\'d be able to do that??'));
+    if (message.author.id !== "166304313004523520") return;
     args = args.join(" ");
     try {
         var evaled = eval(args);
@@ -15,7 +15,8 @@ exports.run = (client, message, args) => {
     } catch (err) {
         message.channel.send(`\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``);
     }
-}
+};
+
 exports.conf = {
   enabled: true,
   guildOnly: false,

@@ -1,7 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const settings = require('./settings.json');
-const chalk = require('chalk');
 const fs = require('fs');
 const moment = require('moment');
 require('./util/eventLoader')(client);
@@ -53,7 +52,7 @@ client.elevation = message => {
   if (mod_role && message.member.roles.has(mod_role.id)) permlvl = 2;
   let admin_role = message.guild.roles.find('name', settings.adminrolename);
   if (admin_role && message.member.roles.has(admin_role.id)) permlvl = 3;
-  let overlord_role = message.guild.roles.find('name', settings.overlordrolename)
+  let overlord_role = message.guild.roles.find('name', settings.overlordrolename);
   if (overlord_role && message.member.roles.has(overlord_role.id)) permlvl = 4;
   if (message.author.id === settings.ownerid) permlvl = 5;
   return permlvl;

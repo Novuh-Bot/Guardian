@@ -1,11 +1,11 @@
 const childProcess = require('child_process');
-exports.run = (client, message, args, data, errors) => {
+exports.run = (client, message, args, data) => {
     childProcess.exec(args.join(' '), {},
-        (err, stdout, stderr) => {
+        (err, stdout) => {
             if (err) return message.channel.sendCode('', err.message);
             message.channel.sendCode('', stdout);
         });
-}
+};
 
 exports.conf = {
   enabled: true,

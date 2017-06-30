@@ -1,6 +1,6 @@
 {
-  "name": "Guardian",
-  "version": "2.2.3",
+  "name": "Mod-Bot",
+  "version": "2.0.0",
   "description": "Mod Bot",
   "main": "app.js",
   "scripts": {
@@ -24,9 +24,5 @@
     "sqlite": "^2.8.0",
     "superagent": "^3.5.2",
     "ytdl-core": "^0.14.2"
-  },
-    "repository": {
-    "type": "git",
-    "url": "https://github.com/Novuh-Bot/Mod-Bot"
   }
 }
