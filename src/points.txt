@@ -3,3 +3,8 @@ Level 2- 400
 Level 3- 900
 Level 4- 1600
 Level 5- 2500
+Level 6- 3600
+Level 7- 4900
+Level 8- 6500
+Level 9- 8200
+Level 10- 11000
