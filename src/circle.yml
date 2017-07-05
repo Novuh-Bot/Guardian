@@ -1,5 +1,0 @@
-machine:
-  node:
-    version: 8.1.2
-general:
-  build_dir: src
