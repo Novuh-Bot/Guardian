@@ -16,13 +16,25 @@ fs.readdir('./commands/', (err, files) => {
   log(`Loading a total of ${files.length} commands.`);
   files.forEach(f => {
     let props = require(`./commands/${f}`);
-    log(`Loading Command: ${props.help.name}. 👌`);
+    log(`Loading Command: ${props.help.name}. ✔`);
     client.commands.set(props.help.name, props);
     props.conf.aliases.forEach(alias => {
       client.aliases.set(alias, props.help.name);
     });
   });
 });
+
+/* fs.readdir('./events/', (err, files) => {
+  if (err) console.error(err);
+  log(`Loading a total of ${files.length} events.`);
+  files.forEach(file => {
+    const eventName = file.split('.')[0];
+    const event = require(`./events/${file}`);
+    client.on(eventName, event.bind(null, client));
+    log(`Loading Event: ${eventName}. ✔`);
+    delete require.cache[require.resolve(`./events/${file}`)];
+  });
+}); */
 
 client.reload = command => {
   return new Promise((resolve, reject) => {

@@ -1,13 +1,11 @@
-exports.run = (client, guild) => {
-    const Discord = require('discord.js');
-    const embed = new Discord.RichEmbed()
-        .setTitle('Guild Create')
-        .setColor(0x00AE86)
-        .setTimestamp()
-        .addField('ID', `${guild.id}`, true)
-        .addField('Name', `${guild.name}`, true)
-        .addField('Member Count', `${guild.memberCount}`, true)
-        .setFooter('Novuh Bot');
+const { discordbotsToken } = require('../settings.json');
+const snekfetch = require('snekfetch');
 
-    client.channels.get('322118074436419584').send({embed});
-};
+exports.run = (client, guild) => {
+  snekfetch.post(`https://discordbots.org/api/bots/${client.user.id}/stats`)
+    .set('Authorization', discordbotsToken)
+    .send({
+      server_count: client.guilds.size
+    })
+    .then(console.log('Sent guild count to discordbots.org!'));
+}
