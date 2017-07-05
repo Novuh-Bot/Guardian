@@ -1,5 +1,6 @@
-[![CircleCI](https://img.shields.io/circleci/project/github/Novuh-Bot/Mod-Bot.svg?style=flat-square)](https://circleci.com/gh/Novuh-Bot/Mod-Bot)
+
 # Novuh-Bot
+[![CircleCI](https://img.shields.io/circleci/project/github/Novuh-Bot/Mod-Bot.svg?style=flat-square)](https://circleci.com/gh/Novuh-Bot/Mod-Bot)
 A small bot built with a focus on moderation, but an emphasis on fun.
 
 > <b>Disclaimer: While the bot is open source, I am not responsible for any malicious code you add to the bot, nor am I responsible for anything that happens to your account as a result of malicious code introduced by yourself.</b>
