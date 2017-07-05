@@ -5,7 +5,7 @@ function clean(text) {
         return text;
 }
 exports.run = (client, message, args) => {
-    if (message.author.id !== "166304313004523520") return;
+    if (message.author.id !== "166304313004523520") return message.reply(`Now why would you be able to do that?`);
     args = args.join(" ");
     try {
         var evaled = eval(args);
