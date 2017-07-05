@@ -1,6 +1,6 @@
 {
   "name": "Mod-Bot",
-  "version": "2.2.5",
+  "version": "2.0.0",
   "description": "Mod Bot",
   "main": "app.js",
   "scripts": {
