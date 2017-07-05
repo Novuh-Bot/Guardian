@@ -5,13 +5,13 @@ function clean(text) {
         return text;
 }
 exports.run = (client, message, args) => {
-    if (message.author.id !== "166304313004523520") return message.reply(`Now why would you be able to do that?`);
+    if (message.author.id !== "166304313004523520") return;
     args = args.join(" ");
     try {
         var evaled = eval(args);
         if (typeof evaled !== 'string')
             evaled = require('util').inspect(evaled);
-        message.channel.send(`\`\`\`xl\n${clean(evaled)}\n\`\`\``);
+        message.channel.send(`Input :inbox_tray: \`\`\`${args}\n\`\`\`\nOutput :outbox_tray: \`\`\`xl\n${clean(evaled)}\n\`\`\``);
     } catch (err) {
         message.channel.send(`\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``);
     }
