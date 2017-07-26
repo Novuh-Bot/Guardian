@@ -1,6 +1,5 @@
 
 # Novuh-Bot
-[![CircleCI](https://img.shields.io/circleci/project/github/Novuh-Bot/Mod-Bot.svg?style=flat-square)](https://circleci.com/gh/Novuh-Bot/Mod-Bot)
 
 A small bot built with a focus on moderation, but an emphasis on fun.
 
