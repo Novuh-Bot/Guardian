@@ -1,7 +1,7 @@
 {
-  "name": "Mod-Bot",
+  "name": "Guardian",
   "version": "2.2.5",
-  "description": "Mod Bot",
+  "description": "A Moderation Bot coded for Discord.",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" "
