@@ -2,7 +2,7 @@
 # Novuh-Bot
 
 [![Discord](https://discordapp.com/api/guilds/313460664699977729/embed.png)](https://discord.gg/qtpgmFe)
-[![CircleCI](https://img.shields.io/circleci/project/github/Novuh-Bot/Mod-Bot.svg?style=flat-square)](https://circleci.com/gh/Novuh-Bot/Guardian)
+[![CircleCI](https://img.shields.io/circleci/project/github/Novuh-Bot/Guardian.svg?style=flat-square)](https://circleci.com/gh/Novuh-Bot/Guardian)
 
 A small bot built with a focus on moderation, but an emphasis on fun.
 
