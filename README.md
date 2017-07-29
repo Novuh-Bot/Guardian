@@ -1,6 +1,8 @@
 
 # Novuh-Bot
 
+[![](https://discordapp.com/api/guilds/313460664699977729/embed.png?style=banner2)(https://discord.gg/]qtpgmFe)
+
 A small bot built with a focus on moderation, but an emphasis on fun.
 
 
