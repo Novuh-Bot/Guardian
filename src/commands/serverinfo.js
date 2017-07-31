@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const settings = require('../settings.json');
 function checkDays(date) {
     let now = new Date();
     let diff = now.getTime() - date.getTime();
@@ -30,8 +31,12 @@ exports.run = (client, message) => {
       } else {
           emojis = message.channel.guild.emojis.map(e => e).join(" ");
       }
+
+      const online = message.guild.presences.filter(p => p.status === 'online').size
+      const idle = message.guild.presences.filter(p => p.status === 'idle').size
+      const dnd = message.guild.presences.filter(p => p.status === 'dnd').size
+      const offline = message.guild.presences.filter(p => p.status === 'offline').size
   embed.setAuthor(message.guild.name, message.guild.iconURL ? message.guild.iconURL : client.user.displayAvatarURL)
-  .setThumbnail(message.guild.iconURL ? message.guild.iconURL : me.user.displayAvatarURL)
   .addField("Created", `${message.guild.createdAt.toString().substr(0, 15)},\n${checkDays(message.guild.createdAt)}`, true)
   .addField("ID", message.guild.id, true)
   .addField("Owner", `${message.guild.owner.user.username}#${message.guild.owner.user.discriminator}`, true)
@@ -39,9 +44,9 @@ exports.run = (client, message) => {
   .addField("Members", message.guild.memberCount, true)
   .addField("Roles", message.guild.roles.size, true)
   .addField("Channels", message.guild.channels.size, true)
-  .addField("Emojis", emojis, true)
   .addField("Verification Level", verifLevels[message.guild.verificationLevel], true)
   .addField("Default Channel", message.guild.defaultChannel, true)
+  .addField("\t\tUsers", `${online} <:online:${settings.online}> ${idle} <:idle:${settings.idle}> ${dnd} <:dnd:${settings.dnd}> ${offline} <:offline:${settings.offline}>`, true)
   .setColor(3447003)
   message.channel.send({embed});
 }
@@ -49,7 +54,7 @@ exports.run = (client, message) => {
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: [],
+  aliases: ['si'],
   permLevel: 0
 };
 
