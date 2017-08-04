@@ -14,7 +14,7 @@ exports.run = (client, message, args) => {
   .addField('User:', `${user.username}#${user.discriminator}`)
   .addField('Moderator:', `${message.author.username}#${message.author.discriminator}`)
   .addField('Reason', reason);
-  message.channel.send(`<:greenTick:${settings.greenTick}> Success! I've logged the warning in the ${logchannel} channel.`)
+  message.channel.send(`<:greenTick:${settings.greenTick}> Success! I've logged the warning in the ${logchannel} channel.`);
   return client.channels.get(logchannel.id).send({embed});
 };
 

@@ -9,15 +9,15 @@ exports.run = (client, message, args, level) => { // eslint-disable-line no-unus
     .setAuthor(client.user.username, client.user.avatarURL)
     .setTitle('Bot Statistics')
     .addField('Users', `${client.users.size.toLocaleString()}`, true)
-    .addField('Servers', `${client.guilds.size.toLocaleString()}`, true)
     .addField('Channels', `${client.channels.size.toLocaleString()}`, true)
-    .addField('Discord.js Version', `v${version}`, true)
-    .addField('Node Version', `${process.version}`, true)
+    .addField('Servers', `${client.guilds.size.toLocaleString()}`, true)
     .addField('Discord Latency:', `${Math.round(client.ping)} MS`, true)
+    .addField('Discord.js Version', `v${version}`, true)
+    .addField('Node.js Version', `${process.version}`, true)
     .addField('Memory Usage', `${(process.memoryUsage().heapUsed / 512 / 512).toFixed(2)} MB`, true)
     .addField('Uptime', `${duration}`, true)
     .addField('Operating System:', `Ubuntu 16.0.4 LTS`, true);
-    message.channel.send({embed})
+    message.channel.send({embed});
 };
 
 exports.conf = {

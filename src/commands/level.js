@@ -1,5 +1,5 @@
 exports.run = (client, message) => {
-}
+};
 
 exports.conf = {
   enabled: true,

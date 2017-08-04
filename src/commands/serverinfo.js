@@ -32,10 +32,10 @@ exports.run = (client, message) => {
           emojis = message.channel.guild.emojis.map(e => e).join(" ");
       }
 
-      const online = message.guild.presences.filter(p => p.status === 'online').size
-      const idle = message.guild.presences.filter(p => p.status === 'idle').size
-      const dnd = message.guild.presences.filter(p => p.status === 'dnd').size
-      const offline = message.guild.presences.filter(p => p.status === 'offline').size
+      const online = message.guild.presences.filter(p => p.status === 'online').size;
+      const idle = message.guild.presences.filter(p => p.status === 'idle').size;
+      const dnd = message.guild.presences.filter(p => p.status === 'dnd').size;
+      const offline = message.guild.presences.filter(p => p.status === 'offline').size;
   embed.setAuthor(message.guild.name, message.guild.iconURL ? message.guild.iconURL : client.user.displayAvatarURL)
   .addField("Created", `${message.guild.createdAt.toString().substr(0, 15)},\n${checkDays(message.guild.createdAt)}`, true)
   .addField("ID", message.guild.id, true)

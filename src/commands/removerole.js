@@ -5,7 +5,7 @@ exports.run = (client, msg) => {
     if (!member) return msg.reply(":no_entry_sign: **Error:** That user does not seem valid.");
     let name = msg.content.split(" ").splice(2).join(" ");
     let role = msg.guild.roles.find("name", name);
-    member.removeRole(role)
+    member.removeRole(role);
     msg.channel.send(`<:greenTick:${settings.check}> **${msg.author.username}**, I've removed the **${name}** role from **${msg.mentions.users.first().username}**.`);
 };
 

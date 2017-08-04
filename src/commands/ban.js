@@ -18,7 +18,7 @@ exports.run = (client, message, args) => {
     .addField('User:', `${user.username}#${user.discriminator} (${user.id})`)
     .addField('Moderator:', `${message.author.username}#${message.author.discriminator}`)
     .addField('Reason', reason);
-    message.channel.send(`<:hammer:${settings.hammer}> Bippity boppity **BAN**! I've logged the ban in the logs channel.`)
+    message.channel.send(`<:hammer:${settings.hammer}> Bippity boppity **BAN**! I've logged the ban in the logs channel.`);
   return client.channels.get(logchannel.id).send({embed});
 };
 

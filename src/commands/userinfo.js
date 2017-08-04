@@ -32,5 +32,5 @@ exports.conf = {
 exports.help = {
   name: 'userinfo',
   description: 'Displays information about a user.',
-  usage: 'userinfo <@user>'
+  usage: 'userinfo'
 };

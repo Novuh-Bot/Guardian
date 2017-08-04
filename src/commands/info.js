@@ -11,7 +11,7 @@ exports.run = (client, message) => {
         setTimeout(() => {
         message.author.send(info.infoMsg4);
         }, 800);
-    }
+    };
 
 exports.conf = {
   enabled: true,

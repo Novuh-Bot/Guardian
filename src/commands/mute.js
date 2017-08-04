@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const settings = require('../settings.json')
+const settings = require('../settings.json');
 exports.run = (client, message, args) => {
   let reason = args.slice(1).join(' ');
   let user = message.mentions.users.first();
@@ -16,7 +16,7 @@ exports.run = (client, message, args) => {
     .addField('User:', `${user.username}#${user.discriminator} (${user.id})`)
     .addField('Moderator:', `${message.author.username}#${message.author.discriminator}`)
     .addField('Reason', reason);
-  message.channel.send(`<:greenTick:${settings.greenTick}> Success! I've logged the mute in the ${logchannel} channel.`)
+  message.channel.send(`<:greenTick:${settings.greenTick}> Success! I've logged the mute in the ${logchannel} channel.`);
   return client.channels.get(logchannel.id).send({embed});
 
 

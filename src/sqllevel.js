@@ -1,11 +1,11 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-const settings = require('./settings.json')
+const settings = require('./settings.json');
 const sql = require("sqlite");
 sql.open("./score.sqlite");
 
 client.on('ready', () => {
-  console.log('I\'m online\nI\'m Online')
+  console.log('Levels are online');
 });
 
 const prefix = "/";

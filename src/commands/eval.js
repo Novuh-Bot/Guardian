@@ -6,7 +6,7 @@ function clean(text) {
 }
 
 const Discord = require('discord.js');
-const settings = require('../settings.json')
+const settings = require('../settings.json');
 
 exports.run = (client, message, args) => {
 
@@ -23,15 +23,15 @@ exports.run = (client, message, args) => {
         .setColor(0x7289DA)
         .setFooter(`NodeJS`, `https://cdn.discordapp.com/emojis/332982363212742678.png`)
         .addField(`Input :inbox_tray:`, `\`\`\`\n${args}\n\`\`\``)
-        .addField(`Output :outbox_tray:`, `\`\`\`\n${clean(evaled)}\n\`\`\``)
-        message.channel.send({ embed })
+        .addField(`Output :outbox_tray:`, `\`\`\`\n${clean(evaled)}\n\`\`\``);
+        message.channel.send({ embed });
     } catch (err) {
     const embed = new Discord.RichEmbed()
         .setAuthor("Guardian", "https://cdn.discordapp.com/avatars/329022281013657612/bcac7f90bdfbe3a29248456b8f52ebd3.png")    
         .setColor(0x7289DA)
         .setFooter(`NodeJS`, `https://cdn.discordapp.com/emojis/332982363212742678.png`)
         .addField(`Input :inbox_tray:`, `\`\`\`\n${args}\n\`\`\``)
-        .addField(`Output :outbox_tray:`, `\`\`\`\n${clean(err)}\n\`\`\``)
+        .addField(`Output :outbox_tray:`, `\`\`\`\n${clean(err)}\n\`\`\``);
         message.channel.send({ embed })    
     }
 };
