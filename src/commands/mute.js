@@ -12,35 +12,24 @@ exports.run = (client, message, args) => {
   const embed = new Discord.RichEmbed()
     .setColor(0x00FFFF)
     .setTimestamp()
-    .addField('Action:', 'Un/Mute')
+    .addField('Action:', 'Mute')
     .addField('User:', `${user.username}#${user.discriminator} (${user.id})`)
     .addField('Moderator:', `${message.author.username}#${message.author.discriminator}`)
     .addField('Reason', reason);
+  message.guild.member(user).addRole(muteRole)
   message.channel.send(`<:greenTick:${settings.greenTick}> Success! I've logged the mute in the ${logchannel} channel.`);
   return client.channels.get(logchannel.id).send({embed});
-
-
-  if (message.guild.member(user).roles.has(muteRole.id)) {
-    message.guild.member(user).removeRole(muteRole).then(() => {
-      client.channels.get(logchannel.id).send({embed}).catch(console.error);
-    });
-  } else {
-    message.guild.member(user).addRole(muteRole).then(() => {
-      client.channels.get(logchannel.id).send({embed}).catch(console.error);
-    });
-  }
-
 };
 
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: ['unmute'],
+  aliases: [],
   permLevel: 2
 };
 
 exports.help = {
   name: 'mute',
-  description: 'mutes or unmutes a mentioned user',
-  usage: 'un/mute [mention] [reason]'
+  description: 'mutesa mentioned user',
+  usage: 'mute [mention] [reason]'
 };
