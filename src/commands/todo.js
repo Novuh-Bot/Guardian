@@ -14,12 +14,12 @@ exports.run = (message, args) => {
         ]
     };
     fs.writeFileSync(todoPath, JSON.stringify(data));
-    fs.readFileSync(todoPath)
+    fs.readFileSync(todoPath);
     data[user.id].todo.push({
         "todo": `${args}`
-    })
-    message.channel.send(`I have added ${args} to your todo list.`)
-}
+    });
+    message.channel.send(`I have added ${args} to your todo list.`);
+};
 
 exports.conf = {
   enabled: true,
