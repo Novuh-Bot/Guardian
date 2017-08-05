@@ -32,7 +32,7 @@ exports.run = (client, message, args) => {
         .setFooter(`NodeJS`, `https://cdn.discordapp.com/emojis/332982363212742678.png`)
         .addField(`Input :inbox_tray:`, `\`\`\`\n${args}\n\`\`\``)
         .addField(`Output :outbox_tray:`, `\`\`\`\n${clean(err)}\n\`\`\``);
-        message.channel.send({ embed })    
+        message.channel.send({ embed });
     }
 };
 

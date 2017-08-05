@@ -47,9 +47,9 @@ exports.run = (client, message) => {
   .addField("Verification Level", verifLevels[message.guild.verificationLevel], true)
   .addField("Default Channel", message.guild.defaultChannel, true)
   .addField("\t\tUsers", `${online} <:online:${settings.online}> ${idle} <:idle:${settings.idle}> ${dnd} <:dnd:${settings.dnd}> ${offline} <:offline:${settings.offline}>`, true)
-  .setColor(3447003)
+  .setColor(3447003);
   message.channel.send({embed});
-}
+};
 
 exports.conf = {
   enabled: true,

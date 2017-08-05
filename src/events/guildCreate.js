@@ -8,4 +8,4 @@ exports.run = (client, guild) => {
       server_count: client.guilds.size
     })
     .then(console.log('Sent guild count to discordbots.org!'));
-}
+};

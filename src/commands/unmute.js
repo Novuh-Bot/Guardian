@@ -12,11 +12,11 @@ exports.run = (client, message, args) => {
   const embed = new Discord.RichEmbed()
     .setColor(0x00FFFF)
     .setTimestamp()
-    .addField('Action:', 'Mute')
+    .addField('Action:', 'Unmute')
     .addField('User:', `${user.username}#${user.discriminator} (${user.id})`)
     .addField('Moderator:', `${message.author.username}#${message.author.discriminator}`)
     .addField('Reason', reason);
-  message.guild.member(user).removeRole(muteRole)
+  message.guild.member(user).removeRole(muteRole);
   message.channel.send(`<:greenTick:${settings.greenTick}> Success! I've logged the mute in the ${logchannel} channel.`);
   return client.channels.get(logchannel.id).send({embed});
 
