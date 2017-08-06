@@ -4,7 +4,6 @@
 [![Discord](https://discordapp.com/api/guilds/313460664699977729/embed.png)](https://discord.gg/qtpgmFe)
 [![CircleCI](https://img.shields.io/circleci/project/github/Novuh-Bot/Guardian.svg?style=flat-square)](https://circleci.com/gh/Novuh-Bot/Guardian)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/20aeb362492a4d34b3d4d26d5b685c59)](https://www.codacy.com/app/OGNova/Guardian?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Novuh-Bot/Guardian&amp;utm_campaign=Badge_Grade)
-[![David](https://img.shields.io/david/Novuh-Bot/Guardian.svg?maxAge=3600)](https://david-dm.org/Novuh-Bot/Guardian)
 
 A small bot built with a focus on moderation, but an emphasis on fun.
 
