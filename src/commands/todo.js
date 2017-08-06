@@ -6,7 +6,7 @@ let data = JSON.parse(fs.readFileSync(todoPath, 'utf8'));
 exports.run = (message, args) => {
     if(!args[0]) return;
     args = args.join(" ");
-    if (!data[user.id]) data[user.id] ={
+    if (!data) data ={
         todo: [
             {
                 "todo": `${args}`
@@ -15,7 +15,7 @@ exports.run = (message, args) => {
     };
     fs.writeFileSync(todoPath, JSON.stringify(data));
     fs.readFileSync(todoPath);
-    data[user.id].todo.push({
+    data.todo.push({
         "todo": `${args}`
     });
     message.channel.send(`I have added ${args} to your todo list.`);
