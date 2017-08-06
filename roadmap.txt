@@ -1,4 +1,5 @@
-The information provided here is a short-term roadmap. For longer term roadmaps, see https://trello.com/b/txGQqtPU/novuh-bot and https://github.com/Novuh-Bot/Guardian/projects/1.
+The information provided here is a short-term roadmap. For longer term roadmaps, see https://trello.com/b/txGQqtPU/novuh-bot 
+and https://github.com/Novuh-Bot/Guardian/projects/1.
 
 Guardian v2: 
     - Rework userinfo command.
