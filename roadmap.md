@@ -1,0 +1,19 @@
+The information provided here is a short-term roadmap. For longer term roadmaps, see https://trello.com/b/txGQqtPU/novuh-bot and https://github.com/Novuh-Bot/Guardian/projects/1.
+
+Guardian v2: 
+    - Rework userinfo command.
+        • Accept user mentions
+        • If no mention is provided, default to message author
+    - Push music commands to seperate files
+        • Create an add command, etc
+        • Streamline the functionality as much as possible
+    - General code style fixes
+
+Guardian v3:
+    - Decide what framework I want to code in
+        • Komada vs Commando
+        • Do I even want to use frameworks, or just rework the current bot?
+    - Find ways to keep max amount of commands
+        • rps may not be possible, etc
+        • Figure out seemingly only d.js commands such as eval
+        • Figure out ways to streamline commands based on frameworks
