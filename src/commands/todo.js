@@ -4,21 +4,21 @@ const todoPath = path.join(__dirname, '..', '/data/todo.json');
 let data = JSON.parse(fs.readFileSync(todoPath, 'utf8'));
 
 exports.run = (message, args) => {
+    let todo = args.slice(1).join(' ');
     if(!args[0]) return;
-    args = args.join(" ");
     if (!data) data ={
         todo: [
             {
-                "todo": `${args}`
+                "todo": `${todo}`
             }
         ]
     };
     fs.writeFileSync(todoPath, JSON.stringify(data));
     fs.readFileSync(todoPath);
     data.todo.push({
-        "todo": `${args}`
+        "todo": `${todo}`
     });
-    message.channel.send(`I have added ${args} to your todo list.`);
+    message.channel.send(`I have added ${todo} to your todo list.`);
 };
 
 exports.conf = {
