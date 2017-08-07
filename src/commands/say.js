@@ -4,9 +4,9 @@ function clean(text) {
     else
         return text;
 }
-const settings = require('../settings.json');
+const { redTick } = require('../settings.json');
 exports.run = (client, message, args) => {
-    if (!args[0]) return message.channel.send(`<:redTick:${settings.redTick}> Please specify something for me to say!`);
+    if (!args[0]) return message.channel.send(`<:redTick:${redTick}> Please specify something for me to say!`);
     args = args.join(" ");
     message.channel.send(clean(args)).then(message.delete([1000]));
 };

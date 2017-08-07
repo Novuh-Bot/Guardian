@@ -1,5 +1,5 @@
 const Discord = require('discord.js'),
-      settings = require('../settings.json');
+const { redTick, hammer } = require('../settings.json');
 exports.run = (client, message, args) => {
   let reason = args.slice(1).join(' ');
   let user = message.mentions.users.first();
@@ -8,7 +8,7 @@ exports.run = (client, message, args) => {
   if (reason.length < 1) return message.reply('You must supply a reason for the ban.');
   if (message.mentions.users.size < 1) return message.reply('You must mention someone to ban them.').catch(console.error);
 
-  if (!message.guild.member(user).bannable) return message.reply(`<:redTick:${settings.redTick}> I cannot ban that member`);
+  if (!message.guild.member(user).bannable) return message.reply(`<:redTick:${redTick}> I cannot ban that member`);
   message.guild.member(user).ban();
 
   const embed = new Discord.RichEmbed()
@@ -18,7 +18,7 @@ exports.run = (client, message, args) => {
     .addField('User:', `${user.username}#${user.discriminator} (${user.id})`)
     .addField('Moderator:', `${message.author.username}#${message.author.discriminator}`)
     .addField('Reason', reason);
-    message.channel.send(`<:hammer:${settings.hammer}> Bippity boppity **BAN**! I've logged the ban in the logs channel.`);
+    message.channel.send(`<:hammer:${hammer}> Bippity boppity **BAN**! I've logged the ban in the logs channel.`);
   return client.channels.get(logchannel.id).send({embed});
 };
 
