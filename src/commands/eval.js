@@ -17,7 +17,7 @@ exports.run = (client, message, args) => {
         var evaled = eval(args);
         if (typeof evaled !== 'string')
             evaled = require('util').inspect(evaled);
-        //message.channel.send(`Input :inbox_tray: \`\`\`${args}\n\`\`\`\nOutput :outbox_tray: \`\`\`xl\n${clean(evaled)}\n\`\`\``);
+        // message.channel.send(`Input :inbox_tray: \`\`\`${args}\n\`\`\`\nOutput :outbox_tray: \`\`\`xl\n${clean(evaled)}\n\`\`\``);
     const embed = new Discord.RichEmbed()
         .setAuthor("Guardian", "https://cdn.discordapp.com/avatars/329022281013657612/bcac7f90bdfbe3a29248456b8f52ebd3.png")    
         .setColor(0x7289DA)
