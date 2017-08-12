@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const settings = require('../settings.json');
+const { online, idle, dnd, offline } = require('../config.json');
 function checkDays(date) {
     let now = new Date();
     let diff = now.getTime() - date.getTime();

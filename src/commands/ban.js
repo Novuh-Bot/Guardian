@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const { redTick, hammer } = require('../settings.json');
+const { redTick, hammer } = require('../config.json');
 exports.run = (client, message, args) => {
   let reason = args.slice(1).join(' ');
   let user = message.mentions.users.first();

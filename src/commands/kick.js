@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const { greenTick } = require('../settings.json');
+const { greenTick } = require('../config.json');
 exports.run = (client, message, args) => {
   let reason = args.slice(1).join(' ');
   let user = message.mentions.users.first();

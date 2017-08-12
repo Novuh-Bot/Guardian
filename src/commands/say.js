@@ -4,7 +4,7 @@ function clean(text) {
     else
         return text;
 }
-const { redTick } = require('../settings.json');
+const { redTick } = require('../config.json');
 exports.run = (client, message, args) => {
     if (!args[0]) return message.channel.send(`<:redTick:${redTick}> Please specify something for me to say!`);
     args = args.join(" ");

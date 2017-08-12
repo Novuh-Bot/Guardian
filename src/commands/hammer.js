@@ -1,4 +1,4 @@
-const { hammer } = require('../settings.json');
+const { hammer } = require('../config.json');
 exports.run = (client, message) => {
   let user = message.mentions.users.first();
   if (message.mentions.users.first() < 1) return message.reply('You can\'t throw a hammer at thin air, pick someone fool.');

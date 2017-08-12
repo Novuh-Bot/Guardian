@@ -1,4 +1,4 @@
-const { redTick, greenTick } = require('../settings.json');
+const { redTick, greenTick } = require('../config.json');
 exports.run = (client, message) => {
     if (message.mentions.users.size === 0) return message.reply(`:<:redTick:${redTick}>: Please mention a user to give the role to.\nExample: ;addrole @user Members`);
     let member = message.guild.member(message.mentions.users.first());

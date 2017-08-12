@@ -1,4 +1,4 @@
-const { greenTick } = require('../settings.json');
+const { greenTick } = require('../config.json');
 exports.run = (client, msg) => {
     if (msg.mentions.users.size === 0) return msg.reply(":no_entry_sign: Please mention a user to remove the role from.");
     let member = msg.guild.member(msg.mentions.users.first());
