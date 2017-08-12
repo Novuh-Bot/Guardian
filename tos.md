@@ -1,12 +1,16 @@
 Terms of Service ("Terms")
 
-Last updated: August 10, 2017
+Last updated: August 11, 2017
 
 Please read these Terms of Service ("Terms", "Terms of Service") carefully before using the Guardian Bot (the "Service") operated by Guardian ("us", "we", or "our").
 
 Your access to and use of the Service is conditioned on your acceptance of and compliance with these Terms. These Terms apply to all visitors, users and others who access or use the Service.
 
 By accessing or using the Service you agree to be bound by these Terms. If you disagree with any part of the terms then you may not access the Service.
+
+Terms of Service
+
+As per the new Discord Terms of Service update, if you continue to use, participate, be in any servers the bot is in, or continue to use the service, Guardian, you agree to allowing me, any person, user, or member, any bot, service, app, and anything to collect, use, transmit, or any data related to your user account, any data made available by Discord in the API or SDK, any metadata from your user account, any messages and or content you send, and anything else you do or give by using the bot application.
 
 Termination
 
