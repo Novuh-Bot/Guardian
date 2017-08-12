@@ -15,11 +15,11 @@ exports.run = async (client, message) => {
             message.channel.awaitMessages(m => m.author.id === message.author.id, { max: 1, time: 10000, errors: [ "time" ] })
                 .then(messages => {
                     const message = messages.first();
-                    if (!answers[message.content]) return message.reply(`That's not a valid answers. Please choose from these options: \n\n${answersList.join("\n")}`)
-                    if (answer === "Yes") return message.reply(`Thanks for opting in!`)
-                    if (answer === "No") return message.reply(`Awh, I hope you change your mind!`)
-                })
-}
+                    if (!answers[message.content]) return message.reply(`That's not a valid answers. Please choose from these options: \n\n${answersList.join("\n")}`);
+                    if (answer === "Yes") return message.reply(`Thanks for opting in!`);
+                    if (answer === "No") return message.reply(`Awh, I hope you change your mind!`);
+                });
+};
 
 exports.conf = {
   enabled: true,
