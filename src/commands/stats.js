@@ -3,9 +3,9 @@ const moment = require("moment");
 require("moment-duration-format");
 
 exports.run = (client, message, args, level) => { // eslint-disable-line no-unused-vars
-  const duration = moment.duration(client.uptime).format(" D [days], H [hrs], m [mins], s [secs]");
+  const duration = moment.duration(client.uptime).format(" D [days], H [hrs], m [mins]");
   const embed = new RichEmbed()
-    .setColor(0x00FFE1)
+    .setColor('RANDOM')
     .setAuthor(client.user.username, client.user.avatarURL)
     .setTitle('Bot Statistics')
     .addField('Users', `${client.users.size.toLocaleString()}`, true)
