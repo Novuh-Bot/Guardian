@@ -18,7 +18,7 @@ exports.run = (client, message, args) => {
     .addField('User:', `${user.username}#${user.discriminator} (${user.id})`)
     .addField('Moderator:', `${message.author.username}#${message.author.discriminator}`)
     .addField('Reason', reason);
-  message.channel.send(`<:greenTick:${greenTick}> Success! I've logged the kick in the ${logchannel} channel.`);
+  message.channel.send(lang('KICK'));
   return client.channels.get(logchannel.id).send({embed});
 };
 

@@ -17,7 +17,7 @@ exports.run = (client, message, args) => {
     .addField('Moderator:', `${message.author.username}#${message.author.discriminator}`)
     .addField('Reason', reason);
   message.guild.member(user).addRole(muteRole);
-  message.channel.send(`<:greenTick:${settings.greenTick}> Success! I've logged the mute in the ${logchannel} channel.`);
+  message.channel.send(lang('MUTE'));
   return client.channels.get(logchannel.id).send({embed});
 };
 

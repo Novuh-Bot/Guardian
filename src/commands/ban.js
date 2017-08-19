@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const { redTick, hammer } = require('../config.json');
+const {lang} = require('../functions/lang.js')
 exports.run = (client, message, args) => {
   let reason = args.slice(1).join(' ');
   let user = message.mentions.users.first();
@@ -18,7 +19,7 @@ exports.run = (client, message, args) => {
     .addField('User:', `${user.username}#${user.discriminator} (${user.id})`)
     .addField('Moderator:', `${message.author.username}#${message.author.discriminator}`)
     .addField('Reason', reason);
-    message.channel.send(`<:hammer:${hammer}> Bippity boppity **BAN**! I've logged the ban in the logs channel.`);
+    message.channel.send(lang('BAN'));
   return client.channels.get(logchannel.id).send({embed});
 };
 
