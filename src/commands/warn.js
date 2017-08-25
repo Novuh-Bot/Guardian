@@ -9,7 +9,7 @@ exports.run = async (client, message, args) => {
   let modlog = message.guild.channels.find('name', 'logs');
   const caseNum = await caseNumber(client, modlog)
   if (!modlog) return message.reply('I cannot find a logs channel. It needs to be called logs for me to work.');
-  let reason = args.slice(1).join(' ') || `Awaiting moderator's input. Use /reason ${caseNum} <reason>`;
+  let reason = args.slice(1).join(' ') || `Awaiting moderator's input. Use ${prefix}reason ${caseNum} <reason>`;
   if (message.mentions.users.size < 1) return message.reply('You must mention someone to warn them.').catch(console.error);
   const embed = new Discord.RichEmbed()
   .setColor(0xFFFF00)
