@@ -1,22 +1,23 @@
 const Discord = require('discord.js');
+const { prefix } = require('../settings.json');
 const { greenTick } = require('../config.json');
-const {lang} = require('../functions/lang.js')
-exports.run = (client, message, args) => {
-  let reason = args.slice(1).join(' ');
+const {lang} = require('../functions/lang.js');
+const {caseNumber} = require('../util/caseNumber.js');
+
+exports.run = async (client, message, args) => {
   let user = message.mentions.users.first();
-  let logchannel = message.guild.channels.find('name', 'logs');
-  if (!logchannel) return message.reply('I cannot find a logs channel');
-  if (reason.length < 1) return message.reply('You must supply a reason for the warning.');
+  let modlog = message.guild.channels.find('name', 'logs');
+  const caseNum = await caseNumber(client, modlog)
+  if (!modlog) return message.reply('I cannot find a logs channel. It needs to be called logs for me to work.');
+  let reason = args.slice(1).join(' ') || `Awaiting moderator's input. Use /reason ${caseNum} <reason>`;
   if (message.mentions.users.size < 1) return message.reply('You must mention someone to warn them.').catch(console.error);
   const embed = new Discord.RichEmbed()
   .setColor(0xFFFF00)
   .setTimestamp()
-  .addField('Action:', 'Warning')
-  .addField('User:', `${user.username}#${user.discriminator}`)
-  .addField('Moderator:', `${message.author.username}#${message.author.discriminator}`)
-  .addField('Reason', reason);
+  .setDescription(`**Action:** Warning\n**Target:** ${user.tag}\n**Moderator:** ${message.author.tag}\n**Reason:** ${reason}`)
+  .setFooter(`Case ${caseNum}`);
   message.channel.send(lang('WARN'));
-  return client.channels.get(logchannel.id).send({embed});
+  return client.channels.get(modlog.id).send({embed});
 };
 
 exports.conf = {

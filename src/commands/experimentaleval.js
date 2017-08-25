@@ -1,4 +1,4 @@
-const snekfetch = require('snekfetch');
+const hastebin = require('eval-overflow');
 
 function clean(text) {
     if (typeof(text) === 'string')
@@ -14,9 +14,9 @@ exports.run = (client, msg, args) => {
     if (typeof evaled !== 'string')
             evaled = require('util').inspect(evaled);
     if (evaled.length > 1500) {
-      const hasteURL = require('snekfetch')
-        .post('http://h.b1nb1n-banned.me/documents')
-        msg.reply(`The output was over 1.5k characters, I have uploaded to hastebin. http://h.b1nb1n-banned.me/${hasteURL.body.key}.js.`)
+      hastebin(`${evaled}`, "js").then(r => {
+        msg.channel.send(`The output was over 1.5k characters, I have uploaded to hastebin at ${r}.`);
+      }).catch(console.error);
     } else {
       msg.channel.send(`\`\`\`xl\n${clean(evaled)}\n\`\`\``);
     }

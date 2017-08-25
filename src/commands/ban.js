@@ -10,7 +10,7 @@ exports.run = (client, message, args) => {
   if (message.mentions.users.size < 1) return message.reply('You must mention someone to ban them.').catch(console.error);
 
   if (!message.guild.member(user).bannable) return message.reply(`<:redTick:${redTick}> I cannot ban that member`);
-  message.guild.member(user).ban();
+  message.guild.member(user).ban({reason:`${reason}`, days: 7});
 
   const embed = new Discord.RichEmbed()
     .setColor(0xFF0000)
