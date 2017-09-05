@@ -1,26 +1,25 @@
-const Discord = require('discord.js');
-const { redTick, hammer } = require('../config.json');
-const {lang} = require('../functions/lang.js')
-exports.run = (client, message, args) => {
-  let reason = args.slice(1).join(' ');
-  let user = message.mentions.users.first();
-  let logchannel = message.guild.channels.find('name', 'logs');
-  if (!logchannel) return message.reply('I cannot find a logs channel');
-  if (reason.length < 1) return message.reply('You must supply a reason for the ban.');
-  if (message.mentions.users.size < 1) return message.reply('You must mention someone to ban them.').catch(console.error);
+const {RichEmbed} = require('discord.js');
+const {caseNumber} = require('../util/caseNumber.js');
+const settings = require('../settings.json');
 
-  if (!message.guild.member(user).bannable) return message.reply(`<:redTick:${redTick}> I cannot ban that member`);
-  message.guild.member(user).ban({reason:`${reason}`, days: 7});
+exports.run = async (client, message, args) => {
+  const user = message.mentions.users.first();
+  const modlog = client.channels.find('name', 'logs');
+  if (!modlog) return message.reply('I cannot find a logs channel');
+  const caseNum = await caseNumber(client, modlog);
+  if (message.mentions.users.size < 1) return message.reply('You must mention someone to ban them.').catch(console.error);
+  const reason = args.splice(1, args.length).join(' ') || `Awaiting moderator's input. Use ${settings.prefix}reason ${caseNum} <reason>.`;
+  
+  if (!message.guild.member(user).bannable) return message.reply('I cannot ban that member');
+  message.guild.member(user).ban({reason:`${reason}`, days: 7})
 
   const embed = new Discord.RichEmbed()
-    .setColor(0xFF0000)
+    .setColor(0x00AE86)
     .setTimestamp()
-    .addField('Action:', 'Ban')
-    .addField('User:', `${user.username}#${user.discriminator} (${user.id})`)
-    .addField('Moderator:', `${message.author.username}#${message.author.discriminator}`)
-    .addField('Reason', reason);
-    message.channel.send(lang('BAN'));
-  return client.channels.get(logchannel.id).send({embed});
+    .setDescription(`**Action:** Ban\n**Target:** ${user.username}#${user.discriminator}\n**Moderator:** ${message.author.username}#${message.author.discriminator}\n**Reason:** ${reason}`)
+    .setFooter(`Case ${caseNum}`);    
+    message.channel.send("Bippity boppity **BAN**! I've logged the ban in the logs channel.")
+    return client.channels.get(modlog.id).send({embed});
 };
 
 exports.conf = {

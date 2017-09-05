@@ -1,19 +1,17 @@
-const { prefix } = require('../settings.json');
+const settings = require('../settings.json');
 
 async function embedSan(embed) {
-  embed.message ? delete embed.message : null
-  embed.footer ? delete embed.footer.embed : null
-  embed.provider ? delete embed.provider.embed : null
-  embed.thumbnail ? delete embed.thumbnail.embed : null
-  embed.image ? delete embed.image.embed : null
-  embed.author ? delete embed.author.embed : null
-  embed.description ? delete embed.description.embed : null
-  embed.fields ? embed.fields.forEach(f => {delete f.embed;}) : null
+  embed.message ? delete embed.message : null;
+  embed.footer ? delete embed.footer.embed : null;
+  embed.provider ? delete embed.provider.embed : null;
+  embed.thumbnail ? delete embed.thumbnail.embed : null;
+  embed.image ? delete embed.image.embed : null;
+  embed.author ? delete embed.author.embed : null;
+  embed.fields ? embed.fields.forEach(f => {delete f.embed;}) : null;
   return embed;
 }
 
 exports.run = async (client, message, args) => {
-  const guild = message.guild;
   const modlog = message.guild.channels.find('name', 'logs');
   const caseNumber = args.shift();
   const newReason = args.join(' ');
@@ -29,21 +27,19 @@ exports.run = async (client, message, args) => {
     modlog.fetchMessage(caseLog.id).then(logMsg => {
       const embed = logMsg.embeds[0];
       embedSan(embed);
-      embed.description = embed.description.replace(`Awaiting moderator's input. Use ${prefix}reason ${caseNumber} <reason>.`, newReason);
+      embed.description = embed.description.replace(`Awaiting moderator's input. Use ${settings.prefix}reason ${caseNumber} <reason>.`, newReason);
       logMsg.edit({embed});
     });
   });
 };
 
 exports.conf = {
-  enabled: true,
-  guildOnly: true,
   aliases: [],
   permLevel: 2
 };
-  
+
 exports.help = {
   name: 'reason',
-  description: 'Assigns a new reason to a specific case.',
-  usage: 'reason [case number] [reason]'
+  description: 'Updates an unset moderator action.',
+  usage: 'reason <case number> <new reason>'
 };

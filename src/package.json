@@ -1,6 +1,6 @@
 {
   "name": "Mod-Bot",
-  "version": "2.2.5",
+  "version": "3.0.0",
   "description": "Mod Bot",
   "main": "app.js",
   "scripts": {
@@ -19,7 +19,6 @@
     "ms": "^0.7.3",
     "opusscript": "0.0.3",
     "pm2": "^2.4.6",
-    "return-deep-diff": "^0.2.7",
     "snekfetch": "^3.1.11",
     "sqlite": "^2.8.0",
     "superagent": "^3.5.2",

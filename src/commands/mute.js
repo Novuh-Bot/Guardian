@@ -1,25 +1,24 @@
-const Discord = require('discord.js');
-const { greenTick } = require('../config.json');
-const {lang} = require('../functions/lang.js')
-exports.run = (client, message, args) => {
-  let reason = args.slice(1).join(' ');
-  let user = message.mentions.users.first();
-  let logchannel = message.guild.channels.find('name', 'logs');
-  let muteRole = client.guilds.get(message.guild.id).roles.find('name', 'Muted');
-  if (!logchannel) return message.reply('I cannot find a logs channel').catch(console.error);
-  if (!muteRole) return message.reply('I cannot find a mute role').catch(console.error);
-  if (reason.length < 1) return message.reply('You must supply a reason for the mute.').catch(console.error);
+const {RichEmbed} = require('discord.js');
+const {caseNumber} = require('../util/caseNumber.js');
+const settings = require('../settings.json');
+
+exports.run = async (client, message, args) => {
+  const user = message.mentions.users.first();
+  const muteRole = client.guilds.get(message.guild.id).roles.find('name', 'Muted');
+  if (!muteRole) return message.reply('I cannot find a mute role').catch(console.error);  
+  const modlog = client.channels.find('name', 'logs');
+  if (!modlog) return message.reply('I cannot find a logs channel');
+  const caseNum = await caseNumber(client, modlog);
   if (message.mentions.users.size < 1) return message.reply('You must mention someone to mute them.').catch(console.error);
+  const reason = args.splice(1, args.length).join(' ') || `Awaiting moderator's input. Use ${settings.prefix}reason ${caseNum} <reason>.`;
+
   const embed = new Discord.RichEmbed()
-    .setColor(0x00FFFF)
+    .setColor(0x00AE86)
     .setTimestamp()
-    .addField('Action:', 'Mute')
-    .addField('User:', `${user.username}#${user.discriminator} (${user.id})`)
-    .addField('Moderator:', `${message.author.username}#${message.author.discriminator}`)
-    .addField('Reason', reason);
+    .setDescription(`**Action:** Mute\n**Target:** ${user.username}#${user.discriminator}\n**Moderator:** ${message.author.username}#${message.author.discriminator}\n**Reason:** ${reason}`)
+    .setFooter(`Case ${caseNum}`);
   message.guild.member(user).addRole(muteRole);
-  message.channel.send(lang('MUTE'));
-  return client.channels.get(logchannel.id).send({embed});
+  return client.channels.get(modlog.id).send({embed});
 };
 
 exports.conf = {
