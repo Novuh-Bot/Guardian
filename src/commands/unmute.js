@@ -6,7 +6,7 @@ exports.run = async (client, message, args) => {
   const user = message.mentions.users.first();
   const muteRole = client.guilds.get(message.guild.id).roles.find('name', 'Muted');
   if (!muteRole) return message.reply('I cannot find a mute role').catch(console.error);  
-  const modlog = client.channels.find('name', 'logs');
+  const modlog = message.guild.channels.find('name', 'logs');
   if (!modlog) return message.reply('I cannot find a logs channel');
   const caseNum = await caseNumber(client, modlog);
   if (message.mentions.users.size < 1) return message.reply('You must mention someone to mute them.').catch(console.error);

@@ -4,7 +4,7 @@ const settings = require('../settings.json');
 
 exports.run = async (client, message, args) => {
   const user = message.mentions.users.first();
-  const modlog = client.channels.find('name', 'logs');
+  const modlog = message.guild.channels.find('name', 'logs');
   if (!modlog) return message.reply('I cannot find a logs channel');
   const caseNum = await caseNumber(client, modlog);
   if (message.mentions.users.size < 1) return message.reply('You must mention someone to kick them.').catch(console.error);
