@@ -1,6 +1,6 @@
 const { RichEmbed } = require('discord.js');
 
-module.exports = (message, oldMessage, newMessage) => {
+module.exports = (client, oldMessage, newMessage) => {
     if(oldMessage.author.bot) {
         return false;
     }
@@ -13,8 +13,7 @@ module.exports = (message, oldMessage, newMessage) => {
         return false;
     }
 
-    const client = message.client;
-    const modlog = message.guild.channels.find('name', 'logs');
+    const modlog = oldMessage.guild.channels.find('name', 'logs');
     const Difference = new RichEmbed()
         .setColor(0x00AE86)
         .setDescription(`**Action:** Message Edit\n**Message Author:** ${oldMessage.author}\n**Old Content:** ${oldMessage.content}\n**New Content:** ${newMessage.content}`);
