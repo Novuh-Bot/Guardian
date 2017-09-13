@@ -15,7 +15,7 @@ module.exports = (message, oldMessage, newMessage) => {
 
     const client = message.client;
     const modlog = message.guild.channels.find('name', 'logs');
-    const Difference = new Discord.RichEmbed()
+    const Difference = new RichEmbed()
         .setColor(0x00AE86)
         .setDescription(`**Action:** Message Edit\n**Message Author:** ${oldMessage.author}\n**Old Content:** ${oldMessage.content}\n**New Content:** ${newMessage.content}`);
     client.channels.get(modlog.id).send({Difference});
