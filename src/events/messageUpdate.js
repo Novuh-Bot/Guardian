@@ -1,6 +1,6 @@
 const { RichEmbed } = require('discord.js');
 
-module.exports = (client, oldMessage, newMessage) => {
+module.exports = (oldMessage, newMessage) => {
     if(oldMessage.author.bot) {
         return false;
     }
@@ -13,6 +13,7 @@ module.exports = (client, oldMessage, newMessage) => {
         return false;
     }
 
+    const client = oldMessage.client
     const modlog = oldMessage.guild.channels.find('name', 'logs');
     const Difference = new RichEmbed()
         .setColor(0x00AE86)
