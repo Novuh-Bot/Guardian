@@ -19,5 +19,5 @@ module.exports = (oldMessage, newMessage) => {
         .setColor(0x00AE86)
         .setDescription(`**Action:** Message Edit\n**Message Author:** ${oldMessage.author}\n**Old Content:** ${oldMessage.content}\n**New Content:** ${newMessage.content}`);
     client.channels.get(modlog.id).send({ embed: Difference });
-    if(!modlog) console.log(`Message EditED | Message Author: ${oldMessage.author} | Old Content: ${oldMessage.content} | New Content: ${newMessage.content}`);
+    if(!modlog) console.log(`Message Edited | Message Author: ${oldMessage.author} | Old Content: ${oldMessage.content} | New Content: ${newMessage.content}`);
 }
