@@ -18,6 +18,6 @@ module.exports = (oldMessage, newMessage) => {
     const Difference = new RichEmbed()
         .setColor(0x00AE86)
         .setDescription(`**Action:** Message Edit\n**Message Author:** ${oldMessage.author}\n**Old Content:** ${oldMessage.content}\n**New Content:** ${newMessage.content}`);
-    client.channels.get(modlog.id).send({Difference});
+    client.channels.get(modlog.id).send({ embed: Difference });
     if(!modlog) console.log(`Message EditED | Message Author: ${oldMessage.author} | Old Content: ${oldMessage.content} | New Content: ${newMessage.content}`);
 }
