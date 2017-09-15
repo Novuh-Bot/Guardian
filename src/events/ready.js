@@ -7,7 +7,7 @@ module.exports = client => {
   const ready = new Discord.RichEmbed()
     .setColor(0x00AE86)
     .setTimestamp()
-    .setDescription(`**Event:** Bot Ready\n**Bot Status:** Okay\n**Ping:** ${Math.round(client.ping)}ms\n**Server Count:** ${guildN}`);
+    .setDescription(`**Event:** Bot Ready\n**Bot Status:** Okay\n\n**Server Count:** ${guildN}`);
   client.user.setPresence({ game: { name: `${help} | Protecting ${guildN} servers.`, type: 0 }});
   console.log(chalk.bgGreen.black(`Online and ready to serve ${guildN} servers.`));
   console.log(require('util').inspect(client.user.presence, {depth:2}))
