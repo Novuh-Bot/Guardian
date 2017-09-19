@@ -17,9 +17,9 @@ async function starEmbed(color, description, author, thumbnail, timestamp, foote
 }
 
 module.exports = async (client, reaction, user) => {
-    const message = message.reaction;
+    const message = reaction.message;
     const config = require('../config.json');
-    const starboardChannel = message.guild.channels.find("name", config.starboardChannel);
+    const starboardChannel = reaction.message.guild.channels.find("name", config.starboardChannel);
     try {
         if(reaction.emoji.name !== "⭐") return;
         const fetch = await starboardChannel.fetchMessages({ limit: 100 });
@@ -32,7 +32,7 @@ module.exports = async (client, reaction, user) => {
             await starMsg.edit({ embed })
         }
     if(!stars) {
-        if(!message.guild.channels.exists("name", config.starboardChannel)) throw `It appears that you do not have a \`${config.starboardChannel}\` channel.`
+        if(!reaction.message.guild.channels.exists("name", config.starboardChannel)) throw `It appears that you do not have a \`${config.starboardChannel}\` channel.`
         const embed = await starEmbed(15844367, message.cleanContent, message.author.tag, message.author.displayAvatarURL, new Date(), `⭐ 1 | ${message.id}`);
         await starboardChannel.send({ embed });
     }
