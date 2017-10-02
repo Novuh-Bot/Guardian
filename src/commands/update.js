@@ -18,12 +18,11 @@ exports.conf = {
     enabled: true,
     guildOnly: false,
     aliases: [],
-    permLevel: "Bot Owner"
+    permLevel: 4
   };
   
   exports.help = {
     name: "update",
-    category: "System",
     description: "Updates the bot. If running under PM2, bot will restart automatically.",
     usage: "update"
   };
