@@ -6,12 +6,11 @@ exports.conf = {
   enabled: true,
   guildOnly: false,
   aliases: [],
-  permLevel: "Bot Admin"
+  permLevel: 4
 };
 
 exports.help = {
   name: "reboot",
-  category: "System",
   description: "Shuts down the bot. If running under PM2, bot will restart automatically.",
   usage: "reboot"
 };
