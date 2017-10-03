@@ -12,7 +12,7 @@ exports.run = async (client, message, args) => {
   if (message.mentions.users.size < 1) return message.reply('You must mention someone to mute them.').catch(console.error);
   const reason = args.splice(1, args.length).join(' ') || `Awaiting moderator's input. Use ${settings.prefix}reason ${caseNum} <reason>.`;
 
-  const embed = new Discord.RichEmbed()
+  const embed = new RichEmbed()
     .setColor(0x00AE86)
     .setTimestamp()
     .setDescription(`**Action:** Mute\n**Target:** ${user.username}#${user.discriminator}\n**Moderator:** ${message.author.username}#${message.author.discriminator}\n**Reason:** ${reason}`)
