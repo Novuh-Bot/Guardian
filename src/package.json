@@ -1,10 +1,10 @@
 {
-  "name": "Mod-Bot",
+  "name": "guardian",
   "version": "3.1.2",
-  "description": "Mod Bot",
+  "description": "An in-depth moderation bot for Discord with all around logging.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" "
+    "test": "echo \"This is a test of the emergency broadcasting system.\" "
   },
   "repository": {
     "type": "git",
