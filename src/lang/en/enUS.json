@@ -1,8 +1,0 @@
-{
-    "BAN": "Bippity boppity **BAN**! I've logged the ban in the logs channel.",
-    "KICK": "Success! I've logged the kick in the logs channel.",
-    "MUTE": "Success! I've logged the mute in the logs channel.`",
-    "UNMUTE": "Success! I've logged the unmute in the logs channel.",
-    "WARN": "Success! I've logged the warn in the logs channel.",
-    "INVITE_SPAM": "You have been ${action}ed for spamming invites."
-}
