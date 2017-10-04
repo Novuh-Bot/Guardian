@@ -13,7 +13,7 @@ exports.run = async (client, message, args) => {
   if (!message.guild.member(user).kickable) return message.reply('I cannot kick that member');
   message.guild.member(user).kick();
 
-  const embed = new Discord.RichEmbed()
+  const embed = new RichEmbed()
     .setColor(0x00AE86)
     .setTimestamp()
     .setDescription(`**Action:** Kick\n**Target:** ${user.username}#${user.discriminator}\n**Moderator:** ${message.author.username}#${message.author.discriminator}\n**Reason:** ${reason}`)

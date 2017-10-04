@@ -1,13 +1,21 @@
 {
-  "name": "Mod-Bot",
+  "name": "guardian",
   "version": "3.1.2",
-  "description": "Mod Bot",
+  "description": "An in-depth moderation bot for Discord with all around logging.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" "
+    "test": "echo \"This is a test of the emergency broadcasting system.\" "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Novuh-Bot/Guardian.git"
   },
   "author": "OGNovuh",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Novuh-Bot/Guardian/issues"
+  },
+  "homepage": "https://github.com/Novuh-Bot/Guardian/#readme",
   "dependencies": {
     "chalk": "^1.1.3",
     "child_process": "^1.0.2",
