@@ -11,5 +11,5 @@ module.exports = client => {
   client.user.setPresence({ game: { name: `${help} | Protecting ${guildN} servers.`, type: 0 }});
   console.log(chalk.bgGreen.black(`Online and ready to serve ${guildN} servers.`));
   console.log(require('util').inspect(client.user.presence, {depth:2}))
-  client.channels.get('338067491349856259').send({ embed: ready })
+  // client.channels.get('338067491349856259').send({ embed: ready })
 };
