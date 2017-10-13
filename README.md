@@ -1,5 +1,5 @@
 
-# Novuh-Bot
+# Guardian
 
 [![Discord](https://discordapp.com/api/guilds/313460664699977729/embed.png)](https://discord.gg/qtpgmFe)
 
