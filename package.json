@@ -1,10 +1,10 @@
 {
-  "name": "guidebot",
-  "version": "3.4.6",
-  "description": "A boilerplate example bot with command handler and reloadable commands. Updated and Maintained by the Idiot's Guide Community",
+  "name": "guardian",
+  "version": "4.0.0",
+  "description": "A class-based branch of Guardian, which will soon be replaced by this branch.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"Error: no test specified\"",
     "start": "node index.js"
   },
   "engines": {
@@ -12,19 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/An-Idiots-Guide/guidebot-class.git"
+    "url": "git+https://github.com/Novuh-Bot/Guardian/tree/remaster.git"
   },
-  "author": "Evelyne Lachance <eslachance@gmail.com> (http://evie.codes)",
-  "contributors": [
-    "York (http://anidiots.guide)"
-  ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/An-Idiots-Guide/guidebot-class/issues"
+    "url": "https://github.com/Novuh-Bot/Guardian//issues"
   },
-  "homepage": "https://github.com/An-Idiots-Guide/guidebot-class#readme",
+  "homepage": "https://github.com/Novuh-Bot/Guardian/tree/remaster#readme",
   "dependencies": {
-    "canvas-constructor": "^0.3.0",
     "discord.js": "^11.2.1",
     "enmap": "^0.4.1",
     "enmap-level": "^1.0.0",
