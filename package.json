@@ -1,0 +1,23 @@
+{
+  "name": "guardian",
+  "version": "4.0.0",
+  "description": "A extremely Alpha rewrite of the Discord bot Guardian. Class-based FTW.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"This is a test.\"",
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Novuh-Bot/Guardian.git"
+  },
+  "author": "OGNovuh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Novuh-Bot/Guardian/issues"
+  },
+  "homepage": "https://github.com/Novuh-Bot/Guardian#readme"
+}
