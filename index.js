@@ -21,6 +21,7 @@ class Guardian extends Discord.Client {
     this.settings = new Enmap({provider: new EnmapLevel({name: 'settings'})});
     this.consent = new Enmap({provider: new EnmapLevel({name: 'consent'})});
     this.reminders = new Enmap({provider: new EnmapLevel({name: 'reminders'})});
+    this.points = new Enmap({provider: new EnmapLevel({name: 'points'})});
   }
 
   permlevel(message) {
